@@ -10,3 +10,9 @@ li{
 .important_places{
     color: blue;
 }
+.large-text{
+    font-size: 2rem;
+}
+.text-center{
+    text-align: center;
+}

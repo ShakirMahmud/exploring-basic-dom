@@ -13,12 +13,14 @@
     </header>
     <main>
       <h1>My awesome DOM</h1>
-      <ul>
-        <li>Text 1</li>
-        <li>Text 2</li>
-        <li>Text 3</li>
-      </ul>
       <section>
+        <ul>
+          <li>Text 1</li>
+          <li>Text 2</li>
+          <li>Text 3</li>
+        </ul>
+      </section>
+      <section class="fruits_container">
         <h1 id="fruits_title">Fruits I like</h1>
         <ul>
           <li>Apple</li>
@@ -26,7 +28,7 @@
           <li>Cherry</li>
         </ul>
       </section>
-      <section>
+      <section id="places-container" class="large-text">
         <h1>Places I like to visit</h1>
         <ul>
           <li class="important_places">Paris</li>
@@ -36,7 +38,9 @@
       </section>
     </main>
     <script src="js/dom.js"></script>
+    <script src="js/styleInJs.js"></script>
     <script>
+      // option-1
       const liCollection = document.getElementsByTagName("li");
       // console.log(liCollection);
       for (const li of liCollection) {
@@ -47,20 +51,21 @@
       for (const h1 of allHeading) {
         // console.log(h1.innerText);
       }
-
+      //Option-2
       const fruitsTitle = document.getElementById('fruits_title');
       fruitsTitle.innerText = 'Fruits changed by Js';
-
+      // Option-3
       const places = document.getElementsByClassName('important_places');
       for (const place of places) {
         // console.log(place.innerText);
       }
+      // Option-4 : querySelector
       
-      // * querySelectorAll
+      // Option-5 : querySelectorAll
       const someLi = document.querySelectorAll('.important_places');
       // console.log(someLi);
       for(const li of someLi){
-        console.log(li.innerText);
+        // console.log(li.innerText);
       }
       
     </script>
