@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <title>Tour of DOM</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to my DOM</h1>
+    </header>
+    <main>
+      <h1>My awesome DOM</h1>
+      <ul>
+        <li>Text 1</li>
+        <li>Text 2</li>
+        <li>Text 3</li>
+      </ul>
+      <section>
+        <h1 id="fruits_title">Fruits I like</h1>
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Cherry</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Places I like to visit</h1>
+        <ul>
+          <li class="important_places">Paris</li>
+          <li class="important_places">London</li>
+          <li class="important_places">Tokyo</li>
+        </ul>
+      </section>
+    </main>
+    <script src="js/dom.js"></script>
+    <script>
+      const liCollection = document.getElementsByTagName("li");
+      // console.log(liCollection);
+      for (const li of liCollection) {
+        // console.log(li.innerText);
+      }
+
+      const allHeading = document.getElementsByTagName("h1");
+      for (const h1 of allHeading) {
+        // console.log(h1.innerText);
+      }
+
+      const fruitsTitle = document.getElementById('fruits_title');
+      fruitsTitle.innerText = 'Fruits changed by Js';
+
+      const places = document.getElementsByClassName('important_places');
+      for (const place of places) {
+        // console.log(place.innerText);
+      }
+      
+      // * querySelectorAll
+      const someLi = document.querySelectorAll('.important_places');
+      // console.log(someLi);
+      for(const li of someLi){
+        console.log(li.innerText);
+      }
+      
+    </script>
+  </body>
+</html>
