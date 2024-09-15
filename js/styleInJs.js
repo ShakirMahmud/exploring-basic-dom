@@ -13,3 +13,4 @@ for (const section of sections){
 const placeContainer = document.getElementById('places-container');
 placeContainer.classList.add('text-center');
 placeContainer.classList.remove('large-text');
+
